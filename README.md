@@ -1,1 +1,3 @@
-# ece386-final
+# Parker Douglas: ECE 386 Final Project
+
+To use this final project run the Docker container on the Jetson Nano. Once the container has been run, the model will automatically start to build via running script.py. Once the model has been built, the terminal will output "Press button when ready." Once the button is pressed, the audio device will start recording. The user should ask for the weather at any location, landmark, or airport. Shortly after, the terminal will output the weather at the requested location. When the user is ready to ask for a weather forecast again, they should press the button again, causing the process to repeat.
