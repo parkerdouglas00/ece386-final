@@ -1,10 +1,12 @@
 #!/bin/bash
 
-gpiomon -r -n 1 gpiochip0 105 | while read -r line; do
-    echo "You pressed the button!"
+#gpiomon -r -n 1 gpiochip0 105 | while read -r line; do
+#    echo "You pressed the button!"
+
     
     sudo docker run --rm \
     --device=/dev/snd \
+    --device=/dev/gpiochip0 \
     --runtime=nvidia \
     --ipc=host \
     -v huggingface:/huggingface/ \

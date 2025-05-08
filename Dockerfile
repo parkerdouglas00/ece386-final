@@ -14,13 +14,16 @@ RUN pip install --upgrade --no-cache-dir pip && \
         transformers==4.49.0 \
         accelerate==1.5.2 \
         sounddevice \
-        requests
+        ollama \
+        requests \
+        Jetson.GPIO
 
 # Copy your Python script into the container
 COPY script.py .
 
 # Set Hugging Face cache directory
 ENV HF_HOME="/huggingface/"
+ENV JETSON_MODEL_NAME=JETSON_ORIN_NANO
 
 # Run the script
 ENTRYPOINT ["python", "script.py"]
